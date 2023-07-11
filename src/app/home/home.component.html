@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <!-- Side navigation content -->
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['submission']">Submissions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['newSubmission']"
+            >Add a new Submission</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-9">
+      <!-- Main content -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="leadFilter">Filter by Lead Name:</label>
+      <select
+        id="leadFilter"
+        class="form-control"
+        [(ngModel)]="leadFilter"
+        (ngModelChange)="onLeadFilterChange()"
+      >
+        <option value="">All Leads</option>
+        <option *ngFor="let lead of leadNames" [value]="lead">
+          {{ lead }}
+        </option>
+      </select>
+    </div>
+    <br />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Consultant Name</th>
+          <th>Sub Date</th>
+          <th>Lead Name</th>
+          <th>Vendor Name</th>
+          <th>Rate</th>
+          <th>sales Person Name</th>
+          <th>Technology</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let submission of filterSubmissionsArray">
+          <td>{{ submission.consultantName }}</td>
+          <td>{{ submission.submissionDate }}</td>
+          <td>{{ submission.vendorName }}</td>
+          <td>{{ submission.rate }}</td>
+          <td>{{ submission.salesPersonName }}</td>
+          <td>{{ submission.technology }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="editItem(submission.id)">
+              Edit
+            </button>
+            <button class="btn btn-danger" (click)="deleteItem(submission.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
