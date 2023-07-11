@@ -12,8 +12,8 @@ export class SubmissionComponent implements OnInit {
   submissions: Submssion[] = [];
   leadNames: string[] = [];
   leadFilter: string = '';
-  consultantFilter: string = '';
-  consultantNames:string[]=[]
+  technologyFilter: string = '';
+  technologyNames: string[] = [];
   filterSubmissionsArray: Submssion[] = [];
 
   constructor(
@@ -28,7 +28,6 @@ export class SubmissionComponent implements OnInit {
     this.leadNames = Array.from(
       new Set(this.submissions.map((submission) => submission.leadName))
     );
-    this.
   }
 
   editItem(id: number) {

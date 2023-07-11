@@ -14,6 +14,20 @@
         </option>
       </select>
     </div>
+    <!-- <div class="col-md-6">
+      <label for="leadFilter">Filter by Technology:</label>
+      <select
+        id="leadFilter"
+        class="form-control"
+        [(ngModel)]="leadFilter"
+        (ngModelChange)="onLeadFilterChange()"
+      >
+        <option value="">All Leads</option>
+        <option *ngFor="let lead of leadNames" [value]="lead">
+          {{ lead }}
+        </option>
+      </select>
+    </div> -->
     <br />
     <table class="table">
       <thead>
